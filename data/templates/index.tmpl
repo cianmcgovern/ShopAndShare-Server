@@ -1,0 +1,24 @@
+<HTML>
+    <HEAD>
+        <TITLE>$title</TITLE>
+        <LINK rel="stylesheet" type="text/css" href="css/index.css" />
+    </HEAD>
+    <BODY>
+        <TABLE border="1">
+            <TR>
+                <TH>Product</TH>
+                <TH>Price</TH>
+                <TH>Location</TH>
+                <TH>Store</TH>
+            </TR>
+            #for $row in $rows
+            <TR>
+                <TD>$row[1]</TD>
+                <TD>$row[2]</TD>
+                <TD>$row[3]</TD>
+                <TD>$row[4]</TD>
+            </TR>
+            #end for
+        </TABLE>
+    </BODY>
+</HTML>

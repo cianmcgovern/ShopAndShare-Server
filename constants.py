@@ -1,0 +1,4 @@
+FULL_PATH = None
+DATABASE = None
+UPLOADS = None
+DBOBJ = None
