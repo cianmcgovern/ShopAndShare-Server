@@ -18,14 +18,14 @@ class parsefile(object):
 
         for line in myfile:
             if isinstance(line,basestring) and line.strip():
-                if ":" in line:
-                    item = line.split(":")
-                    write("Item parsed from file: " + item[0] + " with price: " + item[1],logging.INFO)
+                if "/" in line:
+                    item = line.split("/")
+                    write("Item parsed from file: " + item[0] + " with price: " + item[1] + "with date: " + item[2],logging.INFO)
                     conn = db.db(constants.DATABASE).getconnector()
                     c = conn.cursor()
                     c.execute("""
-                              INSERT INTO items VALUES(null,?,?,?,?);
-                              """,(item[0],item[1],location,store))
+                              INSERT INTO items VALUES(null,?,?,?,?,?);
+                              """,(item[0],item[1],location,store,item[2]))
                     conn.commit()
                 else:
                     write("Unable to find seperator in line from file: " +line,logging.WARN)

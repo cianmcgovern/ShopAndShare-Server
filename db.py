@@ -23,7 +23,7 @@ class db(object):
         write("Database not created, creating...", logging.WARN)        
         c = self.conn.cursor()
         c.execute("""
-                  CREATE TABLE IF NOT EXISTS items(id NOT_NULL AUTO_INCREMENT,product TEXT, price REAL, location TEXT, store TEXT,PRIMARY KEY(id));
+                  CREATE TABLE IF NOT EXISTS items(id NOT_NULL AUTO_INCREMENT,product TEXT, price REAL, location TEXT, store TEXT, date TEXT, PRIMARY KEY(id));
                   """)
         c.close()
         CREATED = True

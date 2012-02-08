@@ -14,6 +14,8 @@ class upload(object):
             <body>
             <form action="upload" method = "post" enctype="multipart/form-data">
             File: <input name="inputfile" type="file" />
+            Location: <input name="location" type="text" />
+            Store: <input name="store" type="text" />
             <input type="submit" />
             </form>
             </body>
