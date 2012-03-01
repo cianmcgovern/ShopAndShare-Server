@@ -1,10 +1,17 @@
 <HTML>
     <HEAD>
         <TITLE>$title</TITLE>
-        <LINK rel="stylesheet" type="text/css" href="css/index.css" />
+        <LINK rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
     </HEAD>
     <BODY>
-        <TABLE border="1">
+        <div class="page-header">
+            <h1>Shop and Share</h1>
+        </div>
+        <div class="row">
+        <div class="span12 offset1">
+        <TABLE class="table table-striped table-bordered tablesorter">
             <TR>
                 <TH>Product</TH>
                 <TH>Price</TH>
@@ -22,5 +29,7 @@
             </TR>
             #end for
         </TABLE>
+        </div>
+        </div>
     </BODY>
 </HTML>
